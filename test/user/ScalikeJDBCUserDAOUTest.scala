@@ -21,7 +21,6 @@ class ScalikeJDBCUserDAOUTest
   with TestDBConnection {
 
   val converter = new WrappedResultSetToTestUserConverterImpl()
-  val timeProvider = new TestTimeProviderImpl()
 
   "retrieving a user by user username" should "return the user with that username added the latest" in { implicit session =>
     makeDAO(session).byUsername(" ALIce", authenticationUserFilter) should contain(alice)

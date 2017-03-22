@@ -18,7 +18,6 @@ class PasswordResetCodeSenderImplUTest
   with MockFactory
   with UserFixture {
 
-  val timeProvider = new TestTimeProviderImpl()
   val configuration =
     new Configuration(ConfigFactory.parseFile(new File("conf/application.test.conf")).resolve())
   val authenticationAPI = mock[AuthenticationAPI]
