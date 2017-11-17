@@ -2,13 +2,12 @@ name := """api-gateway-template"""
 
 version := "0.0.1"
 
-lazy val root = (project in file(".")).enablePlugins(PlayScala, SbtWeb)
+lazy val root = (project in file(".")).enablePlugins(PlayScala)
 
 scalaVersion := "2.11.8"
 
 libraryDependencies ++= Seq(
   jdbc,
-  cache,
   ws,
   filters,
   "com.eigenroute" % "eigenroute-publish-subscribe-rabbitmq-play_2.11" % "0.0.7",
