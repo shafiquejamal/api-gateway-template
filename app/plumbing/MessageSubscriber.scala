@@ -12,6 +12,7 @@ class MessageSubscriber @Inject() (
   extends RabbitMQPublisherSubscriber {
 
   override val props: Props = MessageBrokerMessageDispatcher.props(publish)
-  override val convert: (String) => Option[MessageBrokerMessageType] = ???
+  
+  override val convert: (String) => Option[MessageBrokerMessageType] = (foo: String) => None //TODO: Replace with yor own implementation
 
 }
